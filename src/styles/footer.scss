@@ -1,0 +1,28 @@
+@use './utilis' as utilis;
+
+.footer{
+    background-color: $secandary-bg;
+    width: 100%;
+    font-family: $font-2;
+    .upper{
+        padding: 2rem;
+        @include flexer(space-between);
+        flex-wrap: wrap;
+        a{
+            text-decoration: none;
+            color: $primary-text;
+            margin: 10px;
+            transition: all ease .5s;
+            &:hover{
+                color: $primary-green;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .lower{
+        background: $ternary-bg;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+}

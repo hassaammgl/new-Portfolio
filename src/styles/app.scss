@@ -1,0 +1,40 @@
+@import "./utilis";
+@import "./loader.scss";
+@import "./header.scss";
+@import "./homeIntro.scss";
+@import './PagenotFound.scss';
+@import './skills.scss';
+@import "./technologies.scss";
+@import "./projects.scss";
+@import './Contact.scss';
+@import "./footer.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+    background: $primary-bg;
+    scroll-behavior: smooth;
+}
+
+.toast {
+    color: $primary-green !important;
+    background-color: rgb(22, 22, 22) !important;
+    font-family: $font-2;
+}
+
+.swiper-button-prev {
+    display: none !important;
+}
+
+.swiper-button-next {
+    display: none !important;
+}

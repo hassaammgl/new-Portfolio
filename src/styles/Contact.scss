@@ -1,0 +1,73 @@
+@use './utilis' as utilis;
+
+.contacts {
+    font-family: $font-2;
+    height: fit-content;
+    @include flexer;
+    flex-direction: column;
+
+    >h1 {
+        text-align: center;
+        color: $primary-green;
+        font-size: 2.7rem;
+        margin: 2rem;
+    }
+
+    .container {
+        height: fit-content;
+        width: 500px;
+        padding: 1rem;
+        margin: 1rem;
+        margin-bottom: 2rem;
+        background: linear-gradient($primary-green, $primary-bg);
+        color: $primary-text;
+        transition: all .2s ease;
+        // border-bottom: 1px solid $primary-green;
+
+        &:hover {
+            transform: scale(1.1)
+        }
+
+        .address,
+        .phone,
+        .email {
+            @include flexer(flex-start);
+            flex-direction: column;
+
+            div {
+                width: 100%;
+                @include flexer(flex-start);
+
+                .icon {
+                    font-size: xx-large;
+                }
+            }
+
+            p {
+                margin: 10px;
+                width: 50%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+
+        .container {
+            width: 90%;
+
+            .address,
+            .phone,
+            .email {
+                flex-wrap: wrap;
+
+                p {
+                    margin: 0px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

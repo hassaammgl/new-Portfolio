@@ -1,0 +1,105 @@
+@import './utilis';
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    height: 3em;
+    background-color: $primary-bg;
+    @include flexer(space-between);
+    padding: 30px 3px;
+    background-color: $primary-bg;
+    z-index: 2;
+
+    .icon {
+        color: $primary-text;
+        font-size: 2em;
+        transition: ease .4s;
+
+        &:hover {
+            color: $secandary-text;
+        }
+    }
+
+    .toogle-menu {
+        display: none;
+    }
+
+    h2 {
+        color: $secandary-text;
+        font-family: $font-1;
+        font-size: 3em;
+        margin: 10px;
+    }
+
+
+    .links {
+        a {
+            color: $primary-text;
+            text-decoration: none;
+            margin: 20px;
+            font-family: $font-2;
+            transition: ease .3s;
+            padding-bottom: 3px;
+
+            &:hover {
+                color: $secandary-text;
+                transform: scale('1');
+            }
+        }
+    }
+
+}
+
+
+.none {
+    display: none !important;
+}
+
+.block {
+    display: block !important;
+}
+
+//////////////////////////////// Media Queries ////////////////////////////////
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        position: fixed;
+
+        h2 {
+            font-size: 2em;
+            margin: 10px;
+        }
+
+        .icon {
+            font-size: 1.6em;
+        }
+
+        .links {
+            height: 100vh;
+            display: none;
+        }
+
+        .toogle-menu {
+            display: block;
+        }
+    }
+
+    .icon {
+        font-size: 1.6em;
+    }
+}
+
+.icon {
+    color: $primary-text;
+    font-size: 2em;
+    transition: ease .4s;
+
+    &:hover {
+        color: $secandary-text;
+    }
+}

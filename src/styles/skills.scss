@@ -1,0 +1,103 @@
+@import "./utilis";
+
+
+.skills {
+    height: fit-content;
+    width: 100vw;
+    font-family: $font-2;
+    background: $secandary-bg;
+    padding: 3rem;
+    color: $primary-text;
+    text-align: center;
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+
+        span {
+            color: $primary-green;
+        }
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: 2.3rem;
+    }
+
+    .boxes {
+        height: 70vh;
+        @include flexer;
+        gap: 30px;
+
+        .box {
+            @include flexer;
+            gap: 20px;
+            flex-direction: column;
+            padding: 20px;
+            height: 500px;
+            background-color: $primary-bg;
+            width: 30%;
+            border-radius: 15px;
+            transition: all ease-in-out .5s;
+
+            &:hover {
+                box-shadow: 0 0 17px rgba(255, 255, 255, 0.516);
+                background-color: rgba(255, 255, 255, 0.212);
+            }
+
+            .icon {
+                font-size: 8rem;
+                color: $primary-green;
+            }
+
+            h3 {
+                font-size: 2em;
+            }
+
+            p {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+//////////////////////////////// Media Queries ////////////////////////////////
+
+@media screen and (max-width: 768px) {
+    .skills {
+        width: 100vw;
+        padding: 1rem;
+        height: fit-content;
+
+        h2 {
+            font-size: 1rem;
+            margin-bottom: .7rem;
+        }
+
+        h1 {
+            margin-bottom: .7rem;
+            font-size: 2rem;
+        }
+
+        .boxes {
+            height: fit-content;
+            flex-direction: column;
+            width: 100%;
+
+            .box {
+                height: fit-content;
+                width: 80%;
+
+
+                h3 {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    text-align: justify;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

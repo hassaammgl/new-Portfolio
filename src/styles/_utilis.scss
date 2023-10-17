@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$primary-green: #00bd95;
+$primary-bg: #20272f;
+$secandary-bg: #171c22;
+$ternary-bg: #0e1013;
+$primary-text: #fff;
+$primary-text2: #a9a9a9e6;
+$secandary-text: #00bd95;
+$font-1: 'ADLaM Display', cursive;
+$font-2: 'Noto Sans JP', sans-serif;
+
+@mixin flexer ($justify: center, $items: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+}
