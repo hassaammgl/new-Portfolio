@@ -2,11 +2,11 @@ import img1 from "../assets/boy.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap/all";
 import { useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const HomeIntro = () => {
-  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
     gsap.set(
       [".home-Intro", ".left", ".right", ".h1", ".h2", ".talk-btn", ".my-self"],
@@ -62,7 +62,23 @@ const HomeIntro = () => {
           </h3>
           <h1 className="h1">Hassaam Mughal</h1>
           <h2 className="h2">
-            I am <span>MERN Stack</span> Developer
+
+            I am 
+            <TypeAnimation
+            sequence={[
+              " MERN Stack Developer...",
+              1000,
+              " Front-End Developer...",
+              1000,
+              " Back-End Developer...",
+              1000,
+              " Full-Stack Developer...",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            />
           </h2>
           <p className="my-self">
             A MERN stack developer with 6 months of experience is a software
